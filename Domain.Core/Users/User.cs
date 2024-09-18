@@ -1,4 +1,4 @@
-﻿namespace Domain.Core.User
+﻿namespace Domain.Core.Users
 {
     public class User : Entity
     {
