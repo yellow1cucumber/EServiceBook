@@ -7,5 +7,6 @@ namespace Domain.Core.Cars.CarUnits
         public string Name { get; set; }
 
         public IEnumerable<CarPart> Parts { get; set; } = [];
+        public IEnumerable<Fluids> Fluids { get; set; } = [];
     }
 }
