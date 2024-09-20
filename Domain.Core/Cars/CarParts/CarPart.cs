@@ -1,6 +1,4 @@
-﻿using Domain.Core.Cars.CarParts;
-
-namespace Domain.Core.Car.CarParts
+﻿namespace Domain.Core.Cars.CarParts
 {
     public class CarPart : Entity,
                            IMaintainable, 

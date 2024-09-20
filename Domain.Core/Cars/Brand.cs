@@ -1,4 +1,4 @@
-﻿namespace Domain.Core.Car
+﻿namespace Domain.Core.Cars
 {
     public class Brand : Entity, IIdentifiable
     {
