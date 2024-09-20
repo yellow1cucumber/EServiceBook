@@ -11,3 +11,4 @@
 /obj
 /bin/Debug
 /Infrastructure.GraphQL/obj
+/Infrastructure.GraphQL/bin/Debug/net8.0
