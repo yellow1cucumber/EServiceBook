@@ -1,9 +1,9 @@
-﻿using Domain.Core.Car.CarParts;
-
-namespace Domain.Core.Cars.CarParts
+﻿namespace Domain.Core.Cars.CarParts
 {
     public class Change : Entity
     {
+        public int CarPartId { get; set; }
+
         public DateTime Date { get; set; }
         public string Description { get; set; } = string.Empty;
         public double Mileage { get; set; }

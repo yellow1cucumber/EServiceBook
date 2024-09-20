@@ -20,5 +20,25 @@ namespace DAL
         public DbSet<Change> Changes { get; set; }
         public DbSet<Maintenance> Maintenances { get; set; }
         public DbSet<Fluids> Fluids { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CarPart>()
+                .HasMany(u => u.Changes)
+                .WithOne()
+                .HasForeignKey(uc => uc.CarPartId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<CarPart>()
+                .HasMany(u => u.Maintenances)
+                .WithOne()
+                .HasForeignKey(uc => uc.CarPartId)
+                .OnDelete(DeleteBehavior.NoAction);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+        }
     }
 }

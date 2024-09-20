@@ -1,4 +1,4 @@
-﻿using Domain.Core.Car.CarParts;
+﻿using Domain.Core.Cars.CarParts;
 
 namespace Domain.Core.Cars.CarUnits
 {

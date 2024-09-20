@@ -9,6 +9,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["EServiceBook.csproj", "."]
 COPY ["Domain.Core/Domain.Core.csproj", "Domain.Core/"]
+COPY ["DAL/DAL.csproj", "DAL/"]
 RUN dotnet restore "./EServiceBook.csproj"
 COPY . .
 WORKDIR "/src/."

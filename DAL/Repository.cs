@@ -26,17 +26,16 @@ namespace DAL
         }
         #endregion
 
-        #region CREATE
-        public async Task Create(TEntity entity)
+        #region ADD
+        public async Task AddAsync(TEntity entity)
         {
             await this.entities.AddAsync(entity);
             await this.context.SaveChangesAsync();
         }
         #endregion
 
-
         #region UPDATE
-        public async Task Update(TEntity entity)
+        public async Task UpdateAsync(TEntity entity)
         {
             this.context.Attach(entity);
             this.context.Entry(entity).Property(p => p.Id).IsModified = true;
