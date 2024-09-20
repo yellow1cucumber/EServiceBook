@@ -10,9 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DAL\**" />
     <Compile Remove="Domain.Core\**" />
+    <Content Remove="DAL\**" />
     <Content Remove="Domain.Core\**" />
+    <EmbeddedResource Remove="DAL\**" />
     <EmbeddedResource Remove="Domain.Core\**" />
+    <None Remove="DAL\**" />
     <None Remove="Domain.Core\**" />
   </ItemGroup>
 
