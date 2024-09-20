@@ -1,10 +1,20 @@
 {
   "profiles": {
-    "Docker Compose": {
+    "Swagger": {
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
         "api": "StartDebugging"
+      },
+      "GraphQL": {
+        "commandName": "DockerCompose",
+        "commandVersion": "1.0",
+        "composeLaunchAction": "LaunchBrowser",
+        "composeLaunchServiceName": "api.gate",
+        "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/graphql",
+        "serviceActions": {
+          "api": "StartDebugging"
+        }
       }
     }
   }

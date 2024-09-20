@@ -1,8 +1,8 @@
 using DAL;
-
 using Domain.Core.Users;
-
 using Microsoft.EntityFrameworkCore;
+
+using Infrastructure.GraphQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +11,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<Context>(options => options.UseInMemoryDatabase("EServiceBook"));
 builder.Services.AddTransient<Repository<User>>();
+
+builder.Services.AddGQLService();
 
 var app = builder.Build();
 
@@ -21,6 +23,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapGraphQL("/graphql");
 
 if (app.Environment.IsDevelopment())
 {

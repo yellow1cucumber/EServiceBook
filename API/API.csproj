@@ -32,6 +32,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />
     <ProjectReference Include="..\Domain.Core\Domain.Core.csproj" />
+    <ProjectReference Include="..\Infrastructure.GraphQL\Infrastructure.GraphQL.csproj" />
   </ItemGroup>
 
 </Project>
